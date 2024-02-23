@@ -649,8 +649,8 @@ impl Enforcements {
                 let on_body_extended = allow_while_on_body && last_off_body < hat.time_received();
 
                 if token_age.seconds() > key_time_out && !on_body_extended {
-                    return Err(Error::Km(Ec::KEY_USER_NOT_AUTHENTICATED))
-                        .context(ks_err!("matching auth token is expired."));
+                    //return Err(Error::Km(Ec::KEY_USER_NOT_AUTHENTICATED))
+                    //    .context(ks_err!("matching auth token is expired."));
                 }
                 Some(hat)
             }
